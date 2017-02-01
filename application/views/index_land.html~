@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Shiawiki</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="<?php echo base_url();?>assets/css/styles.css" rel="stylesheet">
+                <link rel="shortcut icon" href="images/logo1.jpg" />
+	</head>
+	<body>
+<div class="container-full">
+
+      <div class="row">
+       
+        <div class="col-lg-12 text-center v-center">
+        
+       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar-inner"> <!--changes made here-->
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/Drawing.png" alt="" width="150" height ="50">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact US</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+          <br><br> 
+          <h1>ShiaWiki</h1>
+          <p class="lead">Search anything regarding Shia Concepts</p>
+          
+          <br><br><br>
+          
+          <form class="col-lg-12">
+            <div class="input-group" style="width:340px;text-align:center;margin:0 auto;">
+            <input class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Enter your Question" type="text">
+              <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">Search</button></span>
+            </div>
+          </form>
+        </div>
+        
+      </div> <!-- /row -->
+  
+  	  <div class="row">
+       
+        <div class="col-lg-12 text-center v-center" style="font-size:39pt;">
+          <a href="#"><i class="icon-google-plus"></i></a> <a href="#"><i class="icon-facebook"></i></a>  <a href="#"><i class="icon-twitter"></i></a> <a href="#"><i class="icon-github"></i></a> <a href="#"><i class="icon-pinterest"></i></a>
+        </div>
+      
+      </div>
+</div>
+        <div class="col-lg-12">
+        <br><br>
+          <p class="pull-right"><a href="http://exaazam-dataazam.rhcloud.com/">Served By the12thhussain</a> &nbsp; ©Copyright 2015 shiawiki<sup>TM</sup></p>
+        <br><br>
+        </div>
+  
+</div>
+
+
+
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<style>
+#mapCanvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+<div id="mapCanvas"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0LN5EeORMn8Jh_4DQw7WForN0ABGM_Cw"></script>
+
+<script>
+function initMap() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+        mapTypeId: 'roadmap'
+    };
+                    
+    // Display a map on the web page
+    map = new google.maps.Map(document.getElementById("mapCanvas"), mapOptions);
+    map.setTilt(50);
+   /* var name = ['Azam','Ansari'];
+    var lat = [40.671531,40.672587];
+    var long = [-73.963588,-73.968146];
+    var markers = [];
+for(var i=0;i<lat.length;i++){
+   markers.push([lat[i],long[i]]);
+} */
+    
+    // Multiple markers location, latitude, and longitude
+    var markers = [
+        ['Brooklyn Museum, NY', 40.671531, -73.963588],
+        ['Brooklyn Public Library, NY', 40.672587, -73.968146],
+        ['Prospect Park Zoo, NY', 40.665588, -73.965336],
+
+    ];
+
+                        
+    // Info window content
+    var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Brooklyn Museum</h3>' +
+        '<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn.</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Brooklyn Public Library</h3>' +
+        '<p>The Brooklyn Public Library (BPL) is the public library system of the borough of Brooklyn, in New York City.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Prospect Park Zoo</h3>' +
+        '<p>The Prospect Park Zoo is a 12-acre (4.9 ha) zoo located off Flatbush Avenue on the eastern side of Prospect Park, Brooklyn, New York City.</p>' +
+        '</div>']
+    ];
+        
+    // Add multiple markers to map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    // Place each marker on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+        });
+        
+        // Add info window to marker    
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Center the map to fit all markers on the screen
+        map.fitBounds(bounds);
+    }
+
+    // Set zoom level
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(15);
+        google.maps.event.removeListener(boundsListener);
+    });
+    
+}
+// Load initialize function
+google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+
+
+</body>
+</html>
