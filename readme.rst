@@ -1,3 +1,13 @@
+#####################
+Steps for Deployment
+#####################
+-> first create database name track 
+-> And then import track.sql in the created database.
+-> put the track folder in the root directory of local machine.
+-> enter this url http://localhost/track/
+-> Login with username: admin and password:12345
+-> just click on the marker to get the name of client or driver 
+-> double click on driver marker to get the path generated to nearest client.
 ###################
 What is CodeIgniter
 ###################
