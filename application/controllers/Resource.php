@@ -276,6 +276,7 @@ class Resource extends CI_Controller {
               $i = $i + 1;
          }    
               $data['name'] = $near_client;
+         $this->db->truncate('near_client');
          $this->load->view('nearest_client',$data);  
      }
 

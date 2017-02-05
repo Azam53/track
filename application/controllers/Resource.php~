@@ -268,7 +268,7 @@ class Resource extends CI_Controller {
            $query_near_client = $this->db->get('near_client');
           foreach ($query_near_client->result() as $row)
          {   
-              $near_client[$i]['id'] = $row->c_id;
+              $near_client[$i]['id'] = $row->id;
               $near_client[$i]['client'] = $row->client;
               $near_client[$i]['driver'] = $row->driver;
               $near_client[$i]['distance'] = $row->distance;
@@ -322,7 +322,7 @@ class Resource extends CI_Controller {
               
                
          }  
-      
+      $this->db->truncate('near_client');
       $this->db->insert('near_client',$shortest_arr );         
       return 1;
      
