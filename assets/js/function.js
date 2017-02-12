@@ -181,12 +181,15 @@ function find_closest_marker(lat, lng) {
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
        
+         // only considering client marker for nearest client distances calculation
+          if(mark[i].icon == null){
          distances.push({
                       title:name,
                       distance:d,
                       latitude:mlat,
                       longitude:mlng
                   });  
+       } 
        
     }
         closest = distances[0].distance;
